@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+   <head>
+      <title>0SINT</title>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <style type="text/css">
+         body {
+         border-radius: 20px;
+         margin: 8px;
+         padding : 10px ;
+         min-height: 360px;
+         width: 580px;
+         /*background-color: black;*/
+         background-image: url(https://i.pinimg.com/originals/f0/19/72/f01972cf406f18a2a752327057547a9b.gif);
+         backdrop-filter: brightness(0.4);
+         }
+         #plugin-title{
+         color: #eee;
+         }
+         #status{
+         color: #eee;
+         }
+         hr{
+         border: 0;
+         height: 1px;
+         background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+         background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+         background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+         background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+         }
+         .records li{
+         font-size: .9em;
+         color: #555;
+         }
+         .records p{
+         font-size: .9em;
+         color: #555;
+         }
+         .records-title{
+         color: #555;
+         font-size: 1em;
+         font-weight: 700;
+         }
+         .micro{
+         font-size: .8em;
+         }
+         body {
+         padding : 10px ;
+         }
+         #exTab1 .tab-content {
+         color : #555;
+         background-color: #eee;
+         border-radius: 30px;
+         padding : 5px 15px;
+         -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+         -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+         box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+/*         border-top-right-radius: 5px;
+         border-bottom-right-radius: 5px;
+         border-bottom-left-radius: 5px;*/
+         }
+         #exTab1 a {
+         color: #eee;
+         }
+         #exTab2 h3 {
+         color : white;
+         background-color: #eee;
+         padding : 5px 15px;
+         }
+         .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+         color: #555 !important;
+         background-color: #eee;
+         border-top-left-radius: 5px;
+         border-top-right-radius: 2px;
+         }
+         /* remove border radius for the tab */
+         #exTab1 .nav-pills > li > a {
+             border-radius: 50px;
+             margin: 6px;
+         }
+         /* change border radius for the tab , apply corners on top*/
+         #exTab3 .nav-pills > li > a {
+         border-radius: 4px 4px 0 0 ;
+         }
+         #exTab3 .tab-content {
+         color : white;
+         background-color: #eee;
+         padding : 5px 15px;
+         }
+         #heart{
+         color: red;
+         }
+      </style>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="jquery-3.2.1.min.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Bahiana' rel='stylesheet'>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="popup.js"></script>
+   </head>
+   <body>
+      <div id="container">
+         <img style="width:60px;height:60px; display: inline;" src="ico.png"><h3 style="display: inline; color: white; font-family: 'Bahiana';font-size: 50px;margin: 20px;">0SINT</h3>
+         <h3 style="position: absolute; display: inline; color: white; font-family: 'Bahiana'; font-size: 15px; margin: 20px; left: 80px; top: 50px;">By Jas9reet</h3><hr>
+         <!-- <h4 style="color:orange">Site: <span id="status"></span></h4> -->
+         <div id="exTab1" class="container">
+            <ul  class="nav nav-pills">
+               <li class="active">
+                  <a  href="#1a" data-toggle="tab"><b>Domain on Pastebin</b></a>
+               </li>
+               <li>
+                  <a href="#2a" data-toggle="tab"><b>WHOIS</b></a>
+               </li>
+               <li>
+                  <a href="#3a" data-toggle="tab">All Directories</a>
+               </li>
+               <!-- <li>
+                  <a href="#4a" data-toggle="tab">Email in Pastebin</a>
+               </li> -->
+               <li>
+                  <a href="#5a" data-toggle="tab"><b>Seach on Pastebin</b></a>
+               </li>
+               <li>
+                  <a href="#6a" data-toggle="tab"><b>Subdomains</b></a>
+               </li>
+                <li>
+                  <a href="#7a" data-toggle="tab"><b>Wayback Availability</b></a>
+               </li>
+               <li>
+                  <a href="#8a" data-toggle="tab"><b>CMS Dectector</b></a>
+               </li>
+                <li>
+                  <a href="#9a" data-toggle="tab"><b>Public Buckets</b></a>
+               </li>
+            </ul>
+            <div class="tab-content clearfix">
+               <div class="tab-pane active" id="1a">
+                  <h3>Domain Pastebin Dumps</h3>
+                  <div class="pastebin_domain"></div>
+               </div>
+               <div class="tab-pane" id="2a">
+                  <h3>WHOIS Lookup</h3>
+                  <h5 class="records-title">General</h5>
+                  <div class="records" id="general">
+                  </div>
+                  <h5 class="records-title">Registrant</h5>
+                  <div class="records" id="registrant">
+                  </div>
+                  <h5 class="records-title">Admin Contact</h5>
+                  <div class="records" id="admin">
+                  </div>
+                  <h5 class="records-title">Tech Contact</h5>
+                  <div class="records" id="tech">
+                  </div>
+                  <h5 class="records-title">Misc</h5>
+                  <div class="records" id="misc">
+                  </div>
+               </div>
+               <div class="tab-pane" id="3a">
+                  <h3>Available Directories</h3>
+                <div class="linkzs"></div>
+
+               </div>
+               <!-- <div class="tab-pane" id="4a">
+                  <h3>Email Dump on Pastebin</h3>
+                  <br>
+                  <center><input type="text" name="formats" value="Search Keyword"/>
+                  <button id="btnConver">Submit</button>
+                  </center>
+                  <br>
+                  <div class="pastebin_email"></div>
+               </div> -->
+               <div class="tab-pane" id="5a">
+                <h3>General  Search on Pastebin Dumps</h3>
+                <br>
+                  <center><input type="text" name="format" value="" placeholder="Search Keyword" />
+                  <button id="btnConvert">Submit</button>
+                  </center>
+                  <br>
+                  <div class="pastebin_search"></div>
+               </div>
+               <div class="tab-pane" id="6a">
+                  <h3>Current Website Subdomains</h3>
+                  <div class="subdomain"></div>
+               </div>
+                <div class="tab-pane" id="7a">
+                  <h3>Current Website Wayback Availability</h3>
+                  <div class="available"></div>
+                </div>
+                <div class="tab-pane" id="8a">
+                  <h3>CMS Decector</h3>
+                 <table class="table">
+                    <thead>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">CMS</th>
+                        <td class="cms"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Version</th>
+                        <td class="cmss_version"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Programming Language</th>
+                        <td class="cmss_language"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Database</th>
+                        <td class="cmss_db"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+               </div>
+               <div class="tab-pane" id="9a">
+                  <h3>Public Buckets</h3>
+                  
+                  
+                  <center><input type="text" name="bucket" value="" placeholder="Public Bucket"  />
+                  <button id="btnbucket">Submit</button>
+                  </center><br>
+                  <div class="buckets_results"></div>
+                  <div class="buckets"></div>
+                </div>
+            </div>
+            <script src="main.js"></script>
+         </div>
+      </div>
+      </div>
+      <hr>
+      </div>
+
+   </body>
+   <center><h4 style="color:red" id="status"></h4></center>
+</html>
